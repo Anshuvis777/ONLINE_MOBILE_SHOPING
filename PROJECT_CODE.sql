@@ -194,6 +194,23 @@ INSERT INTO MAKE_PAYMENT (C_ID, PAYMENT_ID) VALUES
 ('C04', 'Payment4'),
 ('C05', 'Payment5');
 
+
+CREATE INDEX idx_password ON ADMINISTRATION(PASSWORD);
+CREATE INDEX idx_processor_type ON PROCESSOR(PROCESSOR_TYPE);
+CREATE INDEX idx_sensor_no ON CAMERA(SENSOR_NO);
+CREATE INDEX idx_phone_processor_id ON PHONE(PROCESSOR_ID);
+CREATE INDEX idx_phone_camera_id ON PHONE(CAMERA_ID);
+CREATE INDEX idx_phone_admin_id ON PHONE(ADMIN_ID);
+CREATE INDEX idx_price ON PHONE(PRICE);
+CREATE INDEX idx_country ON CUSTOMERS1(COUNTRY);
+CREATE INDEX idx_payment_admin_id ON PAYMENT(ADMIN_ID);
+CREATE INDEX idx_payment_time ON PAYMENT(PAYMENT_TIME);
+CREATE INDEX idx_registration_model_no ON REGISTRATION1(MODEL_NO);
+CREATE INDEX idx_registration_customer_id ON REGISTRATION1(CUSTOMER_ID);
+CREATE INDEX idx_cart_customer_id ON CART(CUSTOMER_ID);
+CREATE INDEX idx_cart_registration_id ON CART(REGISTRATION_ID);
+
+
 -- Querying data from various tables
 SELECT * FROM PHONE;          -- Retrieves all records from PHONE table
 SELECT * FROM PAYMENT;        -- Retrieves all records from PAYMENT table
